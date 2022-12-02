@@ -37,28 +37,37 @@ hence you can easily access the options with only one parameter needed.
 ```javascript
 
 // To create a click, mousedown, mouseup, dblclick event you can use the .MouseDown module
-// MouseDown takes a function as a parameter
 mesh1.MouseDown( () => {
   console.log("Clicked!");
 } );
 
 // To create a mouseenter, mouseover event you can use the .MouseEnter module
-// MouseEnter takes a function as a parameter
 mesh1.MouseEnter( () => {
   console.log("Hovering!");
 } );
 
 // To create a mouseleave, mouseout event you can use the .MouseLeave module
-// MouseLeave takes a function as a parameter
 mesh1.MouseLeave( () => {
   console.log("Left the Object!");
 } );
+
+```
+## Parameters
+For ```MouseDown```, ```MouseEnter```, and ```MouseLeave``` events the only parameter is:
+* ```function()```: is any function that you want to run when the events happens.
+
+```javascript
 
 // To create a link event you can use the .MeshLink module
 // MeshLink takes a URL, a default color and a highlight color as parameters
 mesh1.MeshLink( "https://github.com/Tozturk18/", 0xffffff, 0x555555 );
 
 ```
+## Parameters
+For ```MeshLink``` event the parameter are:
+* ```url```: a string containing a link (a url).
+* ```defaultColor```: a hexidecimal color that defines the default (before mouseover) color of the mesh object.
+* ```highlightColor```: a hexidecimal color that defines the highlight (during mouseover) color of the mesh object.
 
 # Additionaly
 Please contact me if you want me to add more to this module or if there is anything that I need to fix.
