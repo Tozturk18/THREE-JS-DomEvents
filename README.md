@@ -1,4 +1,4 @@
-# THREE-JS-DomEvents-for-Mesh
+# THREE-JS-DomEvents
 DomMesh is a THREE.JS extention that builds on the THREE.Mesh and THREE.Sprite  modules which enables the use of Native DOMEvents on your 3D objects and sprites.
 Currently DomMesh module supports [mousedown](https://www.quirksmode.org/dom/events/click.html) (and other alternatives such as click), [mouseenter and mouseleave](https://www.quirksmode.org/dom/events/mouseover.html). Additionally this module also includes the ```<a>``` element. 
 
