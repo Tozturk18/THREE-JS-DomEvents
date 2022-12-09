@@ -195,9 +195,10 @@ class DomMesh extends Mesh {
      *  - null
      */
     Link(url, defaultColor, highlightColor) {
+        var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && navigator.userAgent.indexOf('CriOS') == -1 && navigator.userAgent.indexOf('FxiOS') == -1;
         this.MouseEnter(() => { this.material.color.set( highlightColor );    document.body.style.cursor	= 'pointer'; } );
         this.MouseLeave(() => { this.material.color.set( defaultColor );  document.body.style.cursor	= 'default'; } );
-        this.MouseDown(() => { window.open(url, "_blank"); } );
+        this.MouseDown(() => { if ( !isSafari ) { window.open(url, "_blank"); } else if ( window.confirm('If you click "ok" you would be redirected.') ) { window.location.href = url; } } );
     }
 
     /* --- End of DOMEvents --- */
@@ -377,7 +378,7 @@ class DomSprite extends Sprite {
     Link(url, defaultColor, highlightColor) {
         this.MouseEnter(() => { this.material.color.set( highlightColor );  document.body.style.cursor	= 'pointer'; } );
         this.MouseLeave(() => { this.material.color.set( defaultColor );    document.body.style.cursor	= 'default'; } );
-        this.MouseDown(() => { window.open(url, "_blank"); } );
+        this.MouseDown(() => { if ( !isSafari ) { window.open(url, "_blank"); } else if ( window.confirm('If you click "ok" you would be redirected.') ) { window.location.href = url; } } );
     }
 
     /* --- End of DOMEvents --- */
