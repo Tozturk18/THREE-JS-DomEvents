@@ -109,4 +109,6 @@ For ```MeshLink``` event the parameter are:
 * ```highlightColor```: a hexidecimal color that defines the highlight (during mouseover) color of the mesh object.
 
 # Additionaly
+For Safari on IOS devices ``` window.open(url, "_blank"); ``` does not work and it requires redirect using ``` window.location.href = url ```. Moreover, to comply with IOS Safari rules I have added the ``` window.confirm() ``` before redirecting the user to the given url.
+
 Please contact me if you want me to add more to this module or if there is anything that I need to fix.
